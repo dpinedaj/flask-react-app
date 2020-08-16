@@ -1,0 +1,26 @@
+version: "3.0"
+services:
+  database:
+    image: mongo
+    container_name: mongodb
+    hostname: mongodb
+    #volumes:
+    #  - ./mongodb/data/db/:/data/db
+    #env_file:
+    #  - mongodb/mongo.env
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+
+    ports:
+      - '27017-27019:27017-27019'
+
+#  api:
+#    image: api
+#
+#  front:
+#    image: front
+
+#  worker:
+#    image: worker
+

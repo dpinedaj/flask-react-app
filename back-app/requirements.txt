@@ -1,0 +1,10 @@
+Flask==1.1.2
+requests==2.18.4
+flask_cors==3.0.8
+flask_jsonpify==1.5.0
+flask_mongoengine==0.9.5
+flask_restplus==0.13.0
+mongoengine==0.20.0
+pandas==1.1.0
+python-dotenv==0.14.0
+werkzeug==0.16.0
