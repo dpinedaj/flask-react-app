@@ -3,4 +3,5 @@ from api.test.test import define_test
 
 
 def test_routes(api: Api):
-    api.add_resource(define_test(api), '/basic')
+    TestApi = define_test(api)
+    api.add_resource(TestApi, '/basic')

@@ -17,8 +17,17 @@ def define_test(api):
             return jsonify({"id": str(t.id),
                             "name": data["name"]})
 
+        @api.doc(parser=parser)
+        def delete(self):
+            data = request.get_json() if request.get_json() is not None \
+                else parser.parse_args()
+            t = Test.objects(**data).delete()
+            return jsonify({"Deleted": t})
+
         @staticmethod
         def get():
-            return jsonify(Test.objects().all())
+            names = [i["name"] for i in Test.objects().all()]
+            return jsonify({"names": names})
+
 
     return TestApi
