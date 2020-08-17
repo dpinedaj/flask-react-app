@@ -20,7 +20,7 @@ class CreateTest extends React.Component {
             <form onSubmit={this.handleNewTest} className="new-test-form">
                 <h4>Create Test</h4>
                 <p>
-                    Insert name: 
+                    {"Insert name: "}
                 <input onChange={this.handleInput} className="new-test-input" type="text" value={this.state.input} />
 
                 </p>
